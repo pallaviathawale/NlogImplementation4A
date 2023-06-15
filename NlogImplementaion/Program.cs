@@ -6,26 +6,11 @@ namespace NlogImplementaion
     {
         static void Main(string[] args)
         {
-            Logger logger = LogManager.GetCurrentClassLogger();
-
-            try
-            {
-                logger.Info("Program started.");
-
-                // Your program logic here
-
-                logger.Info("Program completed successfully.");
-            }
-            catch (Exception ex)
-            {
-                logger.Error(ex, "An error occurred in the program.");
-            }
-            finally
-            {
-                LogManager.Shutdown();
-            }
-
-            Console.ReadLine();
+           ArrayListOperation arrayListOperation = new ArrayListOperation();
+            arrayListOperation.AddItems();
+            arrayListOperation.ReadItems();
+            arrayListOperation.UpdateItems();
+            arrayListOperation.DeleteItem();
         }
     }
     
